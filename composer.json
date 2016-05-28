@@ -9,9 +9,7 @@
 		}
 	],
 	"autoload": {
-		"psr-0": {
-			"LeanMapperQuery": ""
-		}
+		"classmap": ["src/"]
 	},
 	"require": {
 		"tharos/leanmapper": ">=2.1"

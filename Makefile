@@ -8,7 +8,7 @@ test:
 		@$(tester) -c $(php_ini) $(tests_dir)
 
 coverage:
-		@$(tester) -c $(php_ini) --coverage $(coverage_name) --coverage-src LeanMapperQuery/ $(tests_dir)
+		@$(tester) -c $(php_ini) --coverage $(coverage_name) --coverage-src src/ $(tests_dir)
 
 clean:
 		@rm -f $(coverage_name)
