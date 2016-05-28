@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Test: LeanMapperQuery\Query automatic joins.
+ * Test: Inlm\QueryObject\Query automatic joins.
  * @author Michal Bohuslávek
  */
 
@@ -171,7 +171,7 @@ Assert::throws(function () use ($mapper){
 	getQuery()
 		->where('@foo', 3)
 		->applyQuery(getFluent('author'), $mapper);
-}, 'LeanMapperQuery\\Exception\\InvalidStateException', "Entity 'Foo' doesn't have any field corresponding to the primary key column 'id'.");
+}, 'Inlm\\QueryObject\\Exception\\InvalidStateException', "Entity 'Foo' doesn't have any field corresponding to the primary key column 'id'.");
 
 $fluent = getFluent('book');
 getQuery()

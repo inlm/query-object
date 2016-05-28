@@ -1,7 +1,7 @@
 Lean Mapper Query
 =================
 
-Lean Mapper Query is a concept of a *query object* for [Lean Mapper library](https://github.com/Tharos/LeanMapper) which helps to build complex queries using automatic joins (*idea taken from [NotORM library](http://www.notorm.com/)*). Look at the [suggested base classes](https://gist.github.com/mbohuslavek/9410266). For Czech documentation have a look at the [wiki](https://github.com/mbohuslavek/LeanMapperQuery/wiki).
+Lean Mapper Query is a concept of a *query object* for [Lean Mapper library](https://github.com/Tharos/LeanMapper) which helps to build complex queries using automatic joins (*idea taken from [NotORM library](http://www.notorm.com/)*). Look at the [suggested base classes](https://gist.github.com/mbohuslavek/9410266). For Czech documentation have a look at the [wiki](https://github.com/inlm/query-object/wiki).
 
 Features
 --------
@@ -18,7 +18,7 @@ Installation
 It can be installed via [Composer](http://getcomposer.org/download).
 
 ```
-composer require mbohuslavek/leanmapper-query:@dev
+composer require inlm/query-object
 ```
 
 
@@ -80,7 +80,7 @@ class Author extends LeanMapper\Entity
 We build a *query*:
 
 ```php
-$query = new LeanMapperQuery\Query;
+$query = new Inlm\QueryObject\Query;
 $query->where('@author.name', 'Karel');
 ```
 
@@ -121,7 +121,7 @@ Don't repeat yourself
 You can extend `Query` and define own methods.
 
 ```php
-class BookQuery extends LeanMapperQuery\Query
+class BookQuery extends Inlm\QueryObject\Query
 {
 	public function restrictAvailable()
 	{
@@ -144,7 +144,7 @@ Querying entities
 It is also possible to query an entity property (*currently only those properties with `BelongsToMany` or `HasMany` relationships*). Let's build `BaseEntity`:
 
 ```php
-class BaseEntity extends LeanMapperQuery\Entity
+class BaseEntity extends Inlm\QueryObject\Entity
 {
 	protected static $magicMethodsPrefixes = array('find');
 
@@ -163,7 +163,7 @@ class Book extends BaseEntity
 }
 ```
 
-*Note that `BaseEntity` extends `LeanMapperQuery\Entity` to make the following possible.*
+*Note that `BaseEntity` extends `Inlm\QueryObject\Entity` to make the following possible.*
 
 We have defined the `find` method as `protected` because with specifying the method name in `$magicMethodsPrefixes` property you can query entities like this:
 

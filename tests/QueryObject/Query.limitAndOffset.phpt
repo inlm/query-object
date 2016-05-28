@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Test: LeanMapperQuery\Query limit and offset.
+ * Test: Inlm\QueryObject\Query limit and offset.
  * @author Michal Bohuslávek
  */
 

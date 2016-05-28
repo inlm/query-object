@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Test: LeanMapperQuery\Entity.
+ * Test: Inlm\QueryObject\Entity.
  * @author Michal Bohuslávek
  */
 
 use LeanMapper\Repository;
-use LeanMapperQuery\Entity;
+use Inlm\QueryObject\Entity;
 use Tester\Assert;
 
 require_once __DIR__ . '/../bootstrap.php';
@@ -103,20 +103,20 @@ $book = $books[2];
 
 Assert::exception(function () use ($book) {
 	$book->find('author', getQuery());
-}, 'LeanMapperQuery\\Exception\\InvalidRelationshipException');
+}, 'Inlm\\QueryObject\\Exception\\InvalidRelationshipException');
 
 Assert::exception(function () use ($book) {
 	$book->find('name', getQuery());
-}, 'LeanMapperQuery\\Exception\\InvalidArgumentException');
+}, 'Inlm\\QueryObject\\Exception\\InvalidArgumentException');
 
 Assert::exception(function () use ($book) {
 	$book->find('xyz', getQuery());
-}, 'LeanMapperQuery\\Exception\\MemberAccessException');
+}, 'Inlm\\QueryObject\\Exception\\MemberAccessException');
 
 Assert::exception(function () {
 	$book = new Book;
 	$book->find('xyz', getQuery());
-}, 'LeanMapperQuery\\Exception\\InvalidStateException');
+}, 'Inlm\\QueryObject\\Exception\\InvalidStateException');
 
 //////// __call ////////
 
@@ -124,11 +124,11 @@ $author = $authors[2];
 
 Assert::exception(function () use ($author) {
 	$author->testBooks();
-}, 'LeanMapperQuery\\Exception\\InvalidMethodCallException');
+}, 'Inlm\\QueryObject\\Exception\\InvalidMethodCallException');
 
 Assert::exception(function () use ($author) {
 	$author->testBooks('a');
-}, 'LeanMapperQuery\\Exception\\InvalidArgumentException');
+}, 'Inlm\QueryObject\\Exception\\InvalidArgumentException');
 
 Assert::exception(function () use ($author) {
 	$author->testBooks(getQuery());

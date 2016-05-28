@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Test: LeanMapperQuery\Query::where().
+ * Test: Inlm\QueryObject\Query::where().
  * @author Michal Bohuslávek
  */
 

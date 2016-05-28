@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Test: LeanMapperQuery\Query ordering methods.
+ * Test: Inlm\QueryObject\Query ordering methods.
  * @author Michal Bohuslávek
  */
 

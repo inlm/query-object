@@ -1,12 +1,12 @@
 <?php
 
 /**
- * This file is part of the LeanMapperQuery extension
+ * This file is part of the Inlm\QueryObject extension
  * for the Lean Mapper library (http://leanmapper.com)
  * Copyright (c) 2013 Michal Bohuslávek
  */
 
-namespace LeanMapperQuery;
+namespace Inlm\QueryObject;
 
 use LeanMapper;
 use LeanMapper\Fluent;
@@ -14,11 +14,11 @@ use LeanMapper\IMapper;
 use LeanMapper\ImplicitFilters;
 use LeanMapper\Reflection\Property;
 use LeanMapper\Relationship;
-use LeanMapperQuery\Exception\InvalidArgumentException;
-use LeanMapperQuery\Exception\InvalidRelationshipException;
-use LeanMapperQuery\Exception\InvalidStateException;
-use LeanMapperQuery\Exception\MemberAccessException;
-use LeanMapperQuery\Exception\NonExistingMethodException;
+use Inlm\QueryObject\Exception\InvalidArgumentException;
+use Inlm\QueryObject\Exception\InvalidRelationshipException;
+use Inlm\QueryObject\Exception\InvalidStateException;
+use Inlm\QueryObject\Exception\MemberAccessException;
+use Inlm\QueryObject\Exception\NonExistingMethodException;
 
 /**
  * @author Michal Bohuslávek

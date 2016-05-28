@@ -4,7 +4,7 @@ use LeanMapper\Connection;
 use LeanMapper\DefaultEntityFactory;
 use LeanMapper\DefaultMapper;
 use LeanMapper\Fluent;
-use LeanMapperQuery\Query;
+use Inlm\QueryObject\Query;
 
 if (@!include __DIR__ . '/../vendor/autoload.php') {
 	echo 'Install Nette Tester using `composer update --dev`';

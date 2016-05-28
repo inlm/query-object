@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Test: LeanMapperQuery\Query implicit filters.
+ * Test: Inlm\QueryObject\Query implicit filters.
  * @author Michal Bohuslávek
  */
 

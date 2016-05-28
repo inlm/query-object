@@ -1,12 +1,12 @@
 <?php
 
 /**
- * Test: LeanMapperQuery\Query own commands and methods.
+ * Test: Inlm\QueryObject\Query own commands and methods.
  * @author Michal Bohuslávek
  */
 
 use LeanMapper\Entity;
-use LeanMapperQuery\Query;
+use Inlm\QueryObject\Query;
 use Tester\Assert;
 
 require_once __DIR__ . '/../bootstrap.php';
@@ -54,4 +54,4 @@ Assert::same($expected->_export(), $fluent->_export());
 
 Assert::exception(function () use ($query) {
 	$query->wrong();
-}, 'LeanMapperQuery\\Exception\\InvalidStateException');
+}, 'Inlm\\QueryObject\\Exception\\InvalidStateException');
