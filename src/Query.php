@@ -377,7 +377,7 @@ class Query implements IQuery, \Iterator
 				} else {
 					// Dumb replacing of the placeholder.
 					// NOTE: Placeholders are replaced by the type of last found property.
-					// 	It is stupid as it doesn't work for all kinds of SQL statements.
+					// It is stupid as it doesn't work for all kinds of SQL statements.
 					$output .= $this->replacePlaceholder($property);
 				}
 			} else {
@@ -524,7 +524,7 @@ class Query implements IQuery, \Iterator
 			$statement = $this->parseStatement($statement, $replacePlaceholders);
 			$statement = "($statement)";
 			$args = $this->replaceEntitiesForItsPrimaryKeyValues($args);
-			call_user_func_array(array($this->fluent, 'where'),	$args);
+			call_user_func_array(array($this->fluent, 'where'), $args);
 		}
 	}
 

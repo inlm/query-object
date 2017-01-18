@@ -84,7 +84,7 @@ class Entity extends LeanMapper\Entity
 			}
 			list($query) = $arguments;
 			if (!$query instanceof IQuery) {
-				throw new InvalidArgumentException('Argument 1 passed to ' . get_called_class() . "::$name must implement interface Inlm\QueryObject\\IQuery. " . gettype($query) . ' given.');
+				throw new InvalidArgumentException('Argument 1 passed to ' . get_called_class() . "::$name must implement interface Inlm\\QueryObject\\IQuery. " . gettype($query) . ' given.');
 			}
 			list(, $method, $field) = $matches;
 			$field = lcfirst($field);
