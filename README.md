@@ -1,3 +1,8 @@
+
+**WARNING!** This library is **ABANDONED**, use [mibk/LeanMapperQuery](https://github.com/mibk/LeanMapperQuery) instead. It contains all changes from this library and much more.
+
+------
+
 Lean Mapper Query
 =================
 
